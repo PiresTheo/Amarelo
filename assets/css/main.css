@@ -1687,7 +1687,7 @@
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		line-height: 1.5;
-		margin: 0 1em 1em 0;
+		margin: 0 0.6em 1em 0;
 		text-transform: uppercase;
 	}
 
@@ -3637,10 +3637,14 @@
 			line-height: 1.1;
 			font-family: "Dopestyle", cursive;
 			src: url('Dopestyle.ttf');
-			margin-bottom: .25em;
+			margin-bottom: 0em;
 			color: rgba(255, 255, 255, 0.75);
 			text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
 			text-transform: none;
+		}
+
+		#banner img {
+			width: 20%;
 		}
 
 		#banner p {
