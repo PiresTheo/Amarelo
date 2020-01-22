@@ -1689,6 +1689,7 @@
 		line-height: 1.5;
 		margin: 0 0.6em 1em 0;
 		text-transform: uppercase;
+		font-family: "Lobster", cursive;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -3539,7 +3540,7 @@
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
+			/*vertical-align: middle;*/
 			width: 7em;
 		}
 
@@ -4215,8 +4216,6 @@
 			text-transform: inherit;
 			font-size: 3em;
 			padding-left: 1em;
-			font-family : "Lobster";
-			src: url('images/Lobster.ttf');
 		}
 
 		#footer blockquote {

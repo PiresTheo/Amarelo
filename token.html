@@ -3,12 +3,6 @@
     <head>
         <title>Strava OAuth 2 - Login Page</title>
         <script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="bootstrap/css/bootstrap.min.css"
-        />
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     </head>
 
     <body>
@@ -41,19 +35,19 @@
                                 field: response.access_token,
                                 code: code
                             }
-                            $.ajax({
+                            /*$.ajax({
                                 url: "https://www.strava.com/api/v3/athlete/activities",
                                 type: "GET",
                                 data: data2,
                                 success: function(response2, textStatus, xhr){
-                                    console.log("wesh");
+                                    console.log("win");
                                     debugger;
                                 },
                                 error: function(error){
-                                    console.log("ouch");
+                                    console.log("lose");
                                     debugger; 
                                 }
-                            })
+                            })*/
                         },
                         error: function(error){
                             debugger; 
