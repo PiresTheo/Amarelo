@@ -3374,7 +3374,7 @@
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out;
-			transition: color 0.2s ease-in-out;
+			transition: color 0.2dobys ease-in-out;
 			display: inline-block;
 			color: inherit;
 			text-decoration: none;
@@ -3698,10 +3698,10 @@
 			-webkit-transition: height 0.2s ease;
 			-ms-transition: height 0.2s ease;
 			transition: height 0.2s ease;
-			-moz-animation: more 0.75s ease-out 3s forwards;
-			-webkit-animation: more 0.75s ease-out 3s forwards;
-			-ms-animation: more 0.75s ease-out 3s forwards;
-			animation: more 0.75s ease-out 3s forwards;
+			-moz-animation: more 0.75s ease-out 1.5s forwards;
+			-webkit-animation: more 0.75s ease-out 1.5s forwards;
+			-ms-animation: more 0.75s ease-out 1.5s forwards;
+			animation: more 0.75s ease-out 1.5s forwards;
 			background-color: rgba(255, 255, 255, 0.15);
 			border: 0;
 			border-radius: 1em 1em 0 0;
@@ -3750,14 +3750,14 @@
 			}
 
 		#banner:before {
-			-moz-transition: opacity 3s ease;
-			-webkit-transition: opacity 3s ease;
-			-ms-transition: opacity 3s ease;
-			transition: opacity 3s ease;
+			-moz-transition: opacity 1.5s ease;
+			-webkit-transition: opacity 1.5s ease;
+			-ms-transition: opacity 1.5s ease;
+			transition: opacity 1.5s ease;
 			-moz-transition-delay: 1.25s;
 			-webkit-transition-delay: 1.25s;
 			-ms-transition-delay: 1.25s;
-			transition-delay: 1.25s;
+			transition-delay: 0.5s;
 			content: '';
 			display: block;
 			background-color: #000;
@@ -3984,10 +3984,10 @@
 			}
 
 		.post:before {
-			-moz-transition: opacity 3s ease;
-			-webkit-transition: opacity 3s ease;
-			-ms-transition: opacity 3s ease;
-			transition: opacity 3s ease;
+			-moz-transition: opacity 1.5s ease;
+			-webkit-transition: opacity 1.5s ease;
+			-ms-transition: opacity 1.5s ease;
+			transition: opacity 1.5s ease;
 			-moz-transition-delay: 1.25s;
 			-webkit-transition-delay: 1.25s;
 			-ms-transition-delay: 1.25s;
@@ -4464,16 +4464,36 @@
 			padding: 3em 0em;
 		}
 
+		#a_logo
+		{
+			width: 14em;
+			height: 14em;
+			border-radius: 7em;
+			position: absolute;
+			top: -85%;
+			left: 50%; /* à 50% du parent référent */
+ 			transform: translate(-50%); /* décalage de 50% de sa propre taille */
+			background: #000;
+			border-bottom: 5px solid #FFEF00;
+		}
+
+		#a_logo2
+		{
+			width: 13.5em;
+			height: 13.5em;
+			border-radius: 6.75em;
+			position: absolute;
+			top: -2%;
+			left: 50%; /* à 50% du parent référent */
+ 			transform: translate(-50%); /* décalage de 50% de sa propre taille */
+			background: #FFEF00;
+		}
+
 		#a_logo h1
 		{
-			font-size: 3em;
-			position: absolute;
-			top: 0;
-			left: 0;
-			padding: 0em 0.8em 0.2em 0.8em;
-			background: #FFEF00;
-			border-radius: 0px 0px 5px 5px;
-			margin-left: 1.5em;
+			padding-top: 1.8em;
+			padding-left: 0.4em;
+			font-size: 3.2em;
 		}
 		
 		#a_logo a
@@ -4482,30 +4502,38 @@
 			color: #000000;
 		}
 		
-		#a_menu
-		{
-			text-shadow : #FFEF00 2px 2px 3px;
+		#a_menu, #a_menu2 {
 			position: absolute;
 			top: 2em;
-			left: 50%;
-			transform: translate(-50%); /* décalage de 50% de sa propre taille */
+		}
+
+		#a_menu
+		{
+			left: 15%;
+			
+		}
+
+		#a_menu2
+		{
+			right: 15%;
+			
 		}
 		
-		#a_menu ul
+		#a_menu ul, #a_menu2 ul
 		{
 			display: inline-block;
 		}
 		
-		#a_menu li
+		#a_menu li, #a_menu2 li
 		{
 			display: block;
 			float: left;
 			text-align: center;
 		}
 		
-		#a_menu li a, #a_menu li span
+		#a_menu li a, #a_menu li span, #a_menu2 li a, #a_menu2 li span
 		{
-			padding: 1em 1.5em;
+			padding: 1em 4em;
 			letter-spacing: 1px;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -4514,9 +4542,12 @@
 			color: #FFF;
 		}
 		
-		#a_menu li:hover a, #a_menu li.active a, #a_menu li.active span
+		#a_menu li:hover a, #a_menu li.active a, #a_menu li.active span, #a_menu2 li:hover a, #a_menu2 li.active a, #a_menu2 li.active span
 		{
-			background: #FFEF00;
-			text-shadow : #000000 2px 2px 3px;
-			border-radius: 5px;
+			border-bottom: 1px solid #FFEF00;
+			text-shadow : #FFEF00 2px 2px 3px;
+		}
+
+		#bodypage {
+			background: #000000;
 		}

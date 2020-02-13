@@ -1,0 +1,23 @@
+authentification
+token
+Si premiere connexion (pas presnet dans la bdd)
+	recup toutes les activités et tcheck succes sur toutes les activites
+	ajout bdd avec la start_date de la derniere activite
+sinon 
+	
+	recup les nouvelles activités en fct de la start_date dans la bdd et tcheck succes sur celles ci
+fin
+
+profil
+affichage des données
+activités affichage des 20 dernières activités.
+
+GARDER LES ACTIVIT2S EN MEMOIRE OU FAIRE QUE DES REQUETES A LAPI
+
+QUAND CONNECTE SESSION CONNEXION ET FONCTION DECONNEXION RETOUR A L'ACCUEIL
+
+CHANGER CSS EN MODE TOMTOM (logo cercle milieu avec nav bar gauche et droite
+
+
+
+rq : pour use "after" ca compare la date timestamp à la start_date_local, si <= affiche pas, si > affiche
