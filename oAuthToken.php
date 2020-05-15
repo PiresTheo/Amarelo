@@ -19,7 +19,7 @@ $(document).ready(function(){
 		type: "POST",
 		data: data,
 		success: function(reponse, textStatus, xhr){
-			console.log(reponse);
+			//console.log(reponse);
 			
 			//Envoi de la reponse dans des cookies (reponse)
 			createCookie("token_type", reponse.token_type, "10");
@@ -30,15 +30,11 @@ $(document).ready(function(){
 			createCookie("id", reponse.athlete.id, "10");
 			createCookie("firstname", reponse.athlete.firstname, "10");
 			createCookie("lastname", reponse.athlete.lastname, "10");
-			createCookie("city", reponse.athlete.city, "10");
-			createCookie("state", reponse.athlete.state, "10");
-			createCookie("country", reponse.athlete.country, "10");
-			createCookie("sex", reponse.athlete.sex, "10");
 			
 			document.location.href="controller_connexion.php";
 		},
 		error: function(error){
-			document.location.href="index.html";
+			document.location.href="deconnexion.php";
 		}
 	})
 })

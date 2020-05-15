@@ -12,7 +12,7 @@
 			<div id="a_header" class="a_container">
 				<div id="a_logo">
 					<div id="a_logo2">
-						<h1><a href="index.html">Amarelo</a></h1>
+						<h1>Amarelo</h1>
 					</div>
 				</div>
 				<div id="a_menu">
@@ -24,8 +24,12 @@
 				<div id="a_menu2">
 					<ul>
 						<li><a href="succes.php">Succès</a></li>
-						<li><a href="temporaire.php">Temporaire</a></li>
+						<li><a href="deconnexion.php">Déconnexion</a></li>
 					</ul>
+				</div>
+				<div id="a_connected">
+					<li><?php echo '<font color="white">'.$_SESSION['firstname']." ".$_SESSION['lastname']."</font>";?></li>
+					<li><img src="images/logo_account.png" alt="profile_logo"></li>
 				</div>
 			</div>
 		</div>

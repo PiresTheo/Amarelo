@@ -10,16 +10,12 @@ $_SESSION['access_token'] = $_COOKIE["access_token"];
 $_SESSION['id'] = $_COOKIE["id"];
 $_SESSION['firstname'] = $_COOKIE["firstname"];
 $_SESSION['lastname'] = $_COOKIE["lastname"];
-$_SESSION['city'] = $_COOKIE["city"];
-$_SESSION['state'] = $_COOKIE["state"];
-$_SESSION['country'] = $_COOKIE["country"];
-$_SESSION['sex'] = $_COOKIE["sex"];
 
-$id = $_SESSION['id'];
-require('model_connexion.php');
+
+require('interaction_bdd.php');
 $bdd = bddConnect();
-$requser = $bdd->prepare('SELECT * FROM users WHERE id = ?');
-$requser->execute(array($id));
+$requser = $bdd->prepare('SELECT * FROM users WHERE athlete_id = ?');
+$requser->execute(array($_SESSION['id']));
 $userpresent = $requser->rowCount();
 if ($userpresent == 0) { //premiere connexion
     echo '
@@ -33,16 +29,17 @@ if ($userpresent == 0) { //premiere connexion
             headers : { 
                 "Accept": "application/json",
                 "Authorization": "'.$_SESSION['token_type'].' '.$_SESSION['access_token'].'"},
-            success: function(reponse2, textStatus, xhr){		
+            success: function(reponse2, textStatus, xhr){
                 if (reponse2.length > 0) { //au moins une activité sur le compte
-                    createCookie("start_date_local_lastactivity", reponse2[0].start_date_local, "10");
+                    createCookie("date_lastactivity", reponse2[0].start_date_local, "10");
+                    document.location.href="premiere_connexion.php";
                 } else { //aucune activité
-                    createCookie("start_date_local_lastactivity", null, "10");
+                    createCookie("date_lastactivity", null, "10");
                     alert("Votre compte ne contient aucune activité");
                 }
             },
             error: function(error) {
-                document.location.href="index.html";
+                document.location.href="deconnexion.php";
             }
         })
     })
@@ -50,13 +47,14 @@ if ($userpresent == 0) { //premiere connexion
     ';
     
 } else if ($userpresent == 1) { //deja connecté au moins une fois
-    echo 'userpresent == 1';
+
+    //recuperation des activités depuis la derniere date
+
+    //redirection au profil
+    header('Location: http://127.0.0.1/Amarelo/athlete_infos.php');
+
 } else { //error
-    alert("erreur base de données");
+    header('Location: http://127.0.0.1/Amarelo/deconnexion.php');
 }
 ?>
 
-
-
-
-//COOKIE CREER MAIS IMPOSSIBLE DE LE TRAITER DANS LA PAGE CAR PHP AVANT JS

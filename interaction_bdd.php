@@ -1,4 +1,5 @@
 <?php
+//connexion à la bdd
 function bddConnect() {
 	try
     {
@@ -11,14 +12,15 @@ function bddConnect() {
     }
 }
 
-function ajouterUtilisateur($athlete_id,$username,$firstname,$lastname,$city,$state,$country,$sex) {
+//ajoute un utilisateur dans la bdd si il n'existe pas deja
+function ajouterUtilisateur($athlete_id,$success_points,$list_success,$date_lastactivity) {
 	$bdd = bddConnect();
     $reqathlete = $bdd->prepare("SELECT * FROM Users WHERE athlete_id = ?");
     $reqathlete->execute(array($athlete_id));
     $athleteexist = $reqathlete->rowCount();
     if ($athleteexist == 0) {
-        $insertuser = $bdd->prepare("INSERT INTO Users(athlete_id, username, firstname, lastname, city, state, country, sex) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $insertuser->execute(array($athlete_id,$username,$firstname,$lastname,$city,$state,$country,$sex));
+        $insertuser = $bdd->prepare("INSERT INTO Users(athlete_id, success_points, list_success, date_lastactivity) VALUES (?, ?, ?, ?)");
+        $insertuser->execute(array($athlete_id,$success_points,$list_success,$date_lastactivity));
         return true;
     } else {
         return false;   

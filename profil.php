@@ -1,3 +1,11 @@
+<?php 
+session_start();
+//data from cookies to $_SESSION
+$_SESSION['city'] = $_COOKIE["city"];
+$_SESSION['state'] = $_COOKIE["state"];
+$_SESSION['country'] = $_COOKIE["country"];
+$_SESSION['sex'] = $_COOKIE["sex"];
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -12,7 +20,7 @@
 			<div id="a_header" class="a_container">
 				<div id="a_logo">
 					<div id="a_logo2">
-						<h1><a href="index.html">Amarelo</a></h1>
+						<h1>Amarelo</h1>
 					</div>
 				</div>
 				<div id="a_menu">
@@ -24,14 +32,26 @@
 				<div id="a_menu2">
 					<ul>
 						<li><a href="succes.php">Succès</a></li>
-						<li><a href="temporaire.php">Temporaire</a></li>
+						<li><a href="deconnexion.php">Déconnexion</a></li>
 					</ul>
+				</div>
+				<div id="a_connected">
+					<li><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']."</font>";?></li>
+					<li><img src="images/logo_account.png" alt="profile_logo"></li>
 				</div>
 			</div>
 		</div>
 	</head>
 
 	<body id="bodypage">
+
+		<section id="profil_1">
+			<div class="inner">
+				<article class="box">
+					
+				</article>
+			</div>
+		</section>
 		
 
 	</body>

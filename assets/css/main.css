@@ -4494,6 +4494,7 @@
 			padding-top: 1.8em;
 			padding-left: 0.4em;
 			font-size: 3.2em;
+			color: #000000
 		}
 		
 		#a_logo a
@@ -4550,4 +4551,24 @@
 
 		#bodypage {
 			background: #000000;
+		}
+
+		#a_connected {
+			position: absolute;
+			top : 5px;
+			right : 5px;
+		}
+
+		#a_connected li {
+			display: block;
+			float: right;
+			text-align: center;
+			color: #FFF;
+		}
+
+		#a_connected img {
+			width: 5%;
+			height: 5%;
+			float: right;
+			margin-left: 5px;
 		}
