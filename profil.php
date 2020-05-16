@@ -1,10 +1,17 @@
 <?php 
 session_start();
 //data from cookies to $_SESSION
+$_SESSION['photo'] = $_COOKIE["photo"];
 $_SESSION['city'] = $_COOKIE["city"];
 $_SESSION['state'] = $_COOKIE["state"];
 $_SESSION['country'] = $_COOKIE["country"];
 $_SESSION['sex'] = $_COOKIE["sex"];
+$_SESSION['club_name'] = $_COOKIE["club_name"];
+$_SESSION['club_city'] = $_COOKIE["club_city"];
+$_SESSION['club_state'] = $_COOKIE["club_state"];
+$_SESSION['club_country'] = $_COOKIE["club_country"];
+$_SESSION['club_sport'] = $_COOKIE["club_sport"];
+$_SESSION['club_photo'] = $_COOKIE["club_photo"];
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -45,14 +52,41 @@ $_SESSION['sex'] = $_COOKIE["sex"];
 
 	<body id="bodypage">
 
-		<section id="profil_1">
-			<div class="inner">
-				<article class="box">
-					
-				</article>
-			</div>
-		</section>
-		
+		<div id="profil_1" class="profil_class">
+			<article class="box">
+				<div id="profil_1_img">
+					<img src=<?php echo $_SESSION['photo']?> alt="profile_logo">
+				</div>
+				<div id="profil_1_infos">
+					<h2><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']?></h2>
+					<p><?php echo $_SESSION['country'].", ".$_SESSION['state'].", ".$_SESSION['city']?></p>
+					<p><?php echo $_SESSION['sex']?></p>
+				</div>			
+			</article>
+		</div>
+
+		<div id="profil_3" class="profil_class">
+			<article class="box">
+				<div id="profil_3_score">
+					<p>Score</p>
+					<h2>10255</h2>
+				</div>			
+			</article>
+		</div>
+
+		<div id="profil_2" class="profil_class">
+			<article class="box">
+				<div id="profil_2_img">
+					<img src=<?php echo $_SESSION['club_photo']?> alt="profile_logo">
+				</div>
+				<div id="profil_2_infos">
+					<h2><?php echo $_SESSION['club_name']?></h2>
+					<p><?php echo $_SESSION['club_country'].", ".$_SESSION['club_state'].", ".$_SESSION['club_city']?></p>
+					<p><?php echo $_SESSION['club_sport']?></p>
+				</div>			
+			</article>
+		</div>
+			
 
 	</body>
 

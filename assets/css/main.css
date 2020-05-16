@@ -4474,7 +4474,7 @@
 			left: 50%; /* à 50% du parent référent */
  			transform: translate(-50%); /* décalage de 50% de sa propre taille */
 			background: #000;
-			border-bottom: 5px solid #FFEF00;
+			border-bottom: 5px solid #f3ca00;
 		}
 
 		#a_logo2
@@ -4550,7 +4550,8 @@
 		}
 
 		#bodypage {
-			background: #000000;
+			background-image: url("../../images/profil_bg.jpg");
+			background-size: cover;
 		}
 
 		#a_connected {
@@ -4572,3 +4573,62 @@
 			float: right;
 			margin-left: 5px;
 		}
+
+		#profil_1 {
+			float: left;
+			margin-left: 3%;
+			margin-top: 1%;
+			width: 39%;
+		}
+
+		#profil_2 {
+			float: left;
+			margin-left: 2%;
+			margin-top: 1%;
+			width: 39%;
+		}
+
+		#profil_3 {
+			float: left;
+			margin-top: 1%;
+			margin-left: 2%;
+			width: 12%;
+			text-align: center;
+			
+		}
+
+		#profil_1 .box, #profil_2 .box{
+			padding: 2em;
+			border-radius: 10px;
+		}
+		
+		#profil_3 .box  {
+			border-radius: 50%;
+			padding: 3.5em;
+		}
+		
+		#profil_1_img, #profil_2_img {
+			width: 20%;
+			display: block;
+			float:left;
+		}
+
+
+		#profil_1 img, #profil_2 img  {
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+
+		#profil_1_infos, #profil_2_infos {
+			display: block;
+			float: left;
+			margin-left: 10%;
+		}
+
+		#profil_1_infos h2, p, #profil_2_infos h2, h3, p, #profil_3_score h2, p{
+			margin-bottom: 0em;
+			margin-top: 0em;
+		}
+
+		
