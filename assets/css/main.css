@@ -4630,5 +4630,26 @@
 			margin-bottom: 0em;
 			margin-top: 0em;
 		}
+		#profil_3_score h2 {
+			margin-left: 0.5em;
+		}
 
+		#div_tableau {
+			width: 90%;
+			margin-left: 5%;
+			margin-top:2%;
+			background-color: rgba(0, 0, 0, 0.4);
+			border-radius : 10px;
+			
+		}
+
+		#button_back {
+			float : left;
+			margin-left: 45%;
+		}
+
+		#button_for {
+			float : right;
+			margin-right: 45%;
+		}
 		

@@ -1,5 +1,8 @@
 <?php 
 session_start();
+//Numéro de la page pour la page activités remis à la valeur par défaut
+$_SESSION['numpage'] = 1;
+
 //data from cookies to $_SESSION
 $_SESSION['photo'] = $_COOKIE["photo"];
 $_SESSION['city'] = $_COOKIE["city"];
@@ -12,6 +15,8 @@ $_SESSION['club_state'] = $_COOKIE["club_state"];
 $_SESSION['club_country'] = $_COOKIE["club_country"];
 $_SESSION['club_sport'] = $_COOKIE["club_sport"];
 $_SESSION['club_photo'] = $_COOKIE["club_photo"];
+$_SESSION['success_points'] = $_COOKIE["success_points"];
+$_SESSION['nb_activites'] = $_COOKIE["nb_activites"];
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -32,7 +37,7 @@ $_SESSION['club_photo'] = $_COOKIE["club_photo"];
 				</div>
 				<div id="a_menu">
 					<ul>
-						<li class='active'><a href="profil.php">Profil</a></li>
+						<li class='active'><a href="athlete_infos.php">Profil</a></li>
 						<li><a href="activites.php">Activités</a></li>
 					</ul>
 				</div>
@@ -69,7 +74,7 @@ $_SESSION['club_photo'] = $_COOKIE["club_photo"];
 			<article class="box">
 				<div id="profil_3_score">
 					<p>Score</p>
-					<h2>10255</h2>
+					<h2><?php echo $_SESSION['success_points']?></h2>
 				</div>			
 			</article>
 		</div>

@@ -41,27 +41,4 @@ $(document).ready(function(){
 </script>
 ';
 
-
-
-/*
-		// REQUETE ACTIVITES
-		$("#btnActivities").click(function() {
-			$.ajax({
-				url: "https://www.strava.com/api/v3/athlete/activities?per_page=100",
-				type: "GET",
-				headers : { 
-					"Accept": "application/json",
-					"Authorization": "Bearer "+token_reponse.access_token},
-				success: function(reponse2, textStatus, xhr){			
-					
-				},
-				error: function(error) {
-					document.location.href="index.html";
-				}
-			})
-		})
-	})
-</script>'
-*/
-
 ?>

@@ -1,3 +1,8 @@
+<?php 
+session_start();
+//Numéro de la page pour la page activités remis à la valeur par défaut
+$_SESSION['numpage'] = 1;
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -17,7 +22,7 @@
 				</div>
 				<div id="a_menu">
 					<ul>
-						<li><a href="profil.php">Profil</a></li>
+						<li><a href="athlete_infos.php">Profil</a></li>
 						<li><a href="activites.php">Activités</a></li>
 					</ul>
 				</div>
@@ -36,8 +41,6 @@
 	</head>
 
 	<body id="bodypage">
-		
-
 	</body>
 
 	<!-- Footer -->
