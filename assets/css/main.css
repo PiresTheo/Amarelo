@@ -4574,6 +4574,8 @@
 			margin-left: 5px;
 		}
 
+
+
 		#profil_1 {
 			float: left;
 			margin-left: 3%;
@@ -4588,54 +4590,11 @@
 			width: 39%;
 		}
 
-		#profil_3 {
-			float: left;
-			margin-top: 1%;
-			margin-left: 2%;
-			width: 12%;
-			text-align: center;
-			
-		}
-
-		#profil_4 {
-			float: right;
-			width: 55%;
-			margin-right: 2%;
-		}
-
-		#profil_4_table img {
-			width: 20%;
-			margin-left: 40%;
-			vertical-align: middle;
-		}
-		
-
-		#profil_4_table h2 {
-			margin: 0% 0% 0% 0%;;
-			
-		}
-
-		#profil_1 .box, #profil_2 .box{
-			padding: 2em;
-			border-radius: 10px;
-		}
-		
-		#profil_3 .box  {
-			border-radius: 50%;
-			padding: 3.5em;
-		}
-
-		#profil_4 .box {
-			border-radius: 10px;
-			padding: 1em;
-		}
-		
 		#profil_1_img, #profil_2_img {
 			width: 20%;
 			display: block;
 			float:left;
 		}
-
 
 		#profil_1 img, #profil_2 img  {
 			border-radius: 50%;
@@ -4653,10 +4612,93 @@
 			margin-bottom: 0em;
 			margin-top: 0em;
 		}
+
+		#profil_3 {
+			float: left;
+			margin-top: 1%;
+			margin-left: 2%;
+			width: 12%;
+			text-align: center;
+		}
+
 		#profil_3_score h2 {
 			margin-left: 0.5em;
 		}
 
+		#profil_4 {
+			float: right;
+			width: 53%;
+			margin-right: 3%;
+		}
+
+		#profil_4_table img {
+			width: 20%;
+			margin-left: 40%;
+			vertical-align: middle;
+		}
+
+		#profil_4_table h2 {
+			margin: 0% 0% 0% 0%;
+			
+		}
+
+		#profil_5 {
+			float :left;
+			width: 39%;
+			margin-left: 3%;
+		}
+
+		
+
+		#profil_5 h2 {
+			margin: 0% 0% 3% 2%;
+			font-size: 1.7rem;
+		}
+
+		#img_shoes, #img_bikes {
+			width:20%;
+		}
+
+		#img_shoes img , #img_bikes img {
+			width: 100%;
+			margin-top: 19%;
+			margin-bottom: 10%;
+		}
+
+		#rec_shoes, #rec_bikes {
+			vertical-align: middle;
+		}
+
+		#rec_shoes b, #rec_bikes b {
+			font-size: 1rem;
+		}
+
+		
+		#table_mat tr:nth-child(odd) {
+			background-color: rgba(0, 0, 0, 0);
+		}
+
+		#table_mat tr:nth-child(even) {
+			background-color: rgba(0, 0, 0, 0);
+		}
+
+
+
+		#profil_1 .box, #profil_2 .box{
+			padding: 2em;
+			border-radius: 10px;
+		}
+		
+		#profil_3 .box  {
+			border-radius: 50%;
+			padding: 3.5em;
+		}
+
+		#profil_4 .box, #profil_5 .box {
+			border-radius: 10px;
+			padding: 1em;
+		}
+		
 		#div_tableau {
 			width: 90%;
 			margin-left: 5%;

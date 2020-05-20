@@ -12,7 +12,6 @@ echo '
                 "Accept": "application/json",
                 "Authorization": "'.$_SESSION['token_type'].' '.$_SESSION['access_token'].'"},
             success: function(reponse, textStatus, xhr){
-                //console.log(reponse);
                 createCookie("photo", reponse.profile, "10");
                 createCookie("city", reponse.city, "10");
                 createCookie("state", reponse.state, "10");
@@ -24,6 +23,10 @@ echo '
                 createCookie("club_country", reponse.clubs[0].country, "10");
                 createCookie("club_sport", reponse.clubs[0].sport_type, "10");
                 createCookie("club_photo", reponse.clubs[0].profile, "10");
+                createCookie("shoes_name", reponse.shoes[0].name, "10");
+                createCookie("shoes_distance", (reponse.shoes[0].distance/1000).toFixed(2) + " km", "10");
+                createCookie("bikes_name", reponse.bikes[0].name, "10");
+                createCookie("bikes_distance", (reponse.bikes[0].distance/1000).toFixed(2) + " km", "10");
             },
             error: function(error) {
                 document.location.href="deconnexion.php";
@@ -78,7 +81,7 @@ $bdd = bddConnect();
 $requser = $bdd->prepare('SELECT * FROM users WHERE athlete_id = ?');
 $requser->execute(array($_SESSION['id']));
 $userinfo = $requser->fetch();
-echo '<script type="text/javascript">createCookie("success_points", '.$userinfo['success_points'].', "10");</script>';
-header('Location: http://127.0.0.1/Amarelo/profil.php');
-
+echo '<script type="text/javascript">createCookie("success_points", '.$userinfo['success_points'].', "10");
+document.location.replace("http://127.0.0.1/Amarelo/profil.php");
+</script>';
 ?>

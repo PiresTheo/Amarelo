@@ -17,6 +17,10 @@ $_SESSION['club_sport'] = $_COOKIE["club_sport"];
 $_SESSION['club_photo'] = $_COOKIE["club_photo"];
 $_SESSION['success_points'] = $_COOKIE["success_points"];
 $_SESSION['nb_activites'] = $_COOKIE["nb_activites"];
+$_SESSION['shoes_name'] = $_COOKIE["shoes_name"];
+$_SESSION['shoes_distance'] = $_COOKIE["shoes_distance"];
+$_SESSION['bikes_name'] = $_COOKIE["bikes_name"];
+$_SESSION['bikes_distance'] = $_COOKIE["bikes_distance"];
 
 $_SESSION['rides_count'] = $_COOKIE["rides_count"];
 $_SESSION['rides_distance'] = $_COOKIE["rides_distance"];
@@ -141,6 +145,31 @@ $_SESSION['swims_movingtime'] = $_COOKIE["swims_movingtime"];
 				</table>
 			</article>
 		</div>
+
+		<div id="profil_5">
+			<article class="box">
+				<h2>Matériels</h2>
+				<table id="table_mat">
+					<tr>
+						<td id="img_shoes">
+							<img src="images/shoeslogo.png" alt="shoeslogo">
+						</td>
+						<td id="rec_shoes">
+							<p><b><?php echo $_SESSION['shoes_name']?></b></p>
+							<p>Distance : <?php echo $_SESSION['shoes_distance']?></p>
+						</td>
+					</tr>
+						<td id="img_bikes">
+							<img src="images/bikelogo.png" alt="bikelogo">
+						</td>
+						<td id="rec_bikes">
+							<p><b><?php echo $_SESSION['bikes_name']?></b></p>
+							<p>Distance : <?php echo $_SESSION['bikes_distance']?></p>
+						</td>
+				</table>
+			</article>
+		</div>
+
 
 	</body>
 
