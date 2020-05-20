@@ -4579,14 +4579,14 @@
 		#profil_1 {
 			float: left;
 			margin-left: 3%;
-			margin-top: 1%;
+			margin-top: 2%;
 			width: 39%;
 		}
 
 		#profil_2 {
 			float: left;
 			margin-left: 2%;
-			margin-top: 1%;
+			margin-top: 2%;
 			width: 39%;
 		}
 
@@ -4615,7 +4615,7 @@
 
 		#profil_3 {
 			float: left;
-			margin-top: 1%;
+			margin-top: 2%;
 			margin-left: 2%;
 			width: 12%;
 			text-align: center;
