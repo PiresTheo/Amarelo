@@ -17,7 +17,20 @@ $_SESSION['club_sport'] = $_COOKIE["club_sport"];
 $_SESSION['club_photo'] = $_COOKIE["club_photo"];
 $_SESSION['success_points'] = $_COOKIE["success_points"];
 $_SESSION['nb_activites'] = $_COOKIE["nb_activites"];
+
+$_SESSION['rides_count'] = $_COOKIE["rides_count"];
+$_SESSION['rides_distance'] = $_COOKIE["rides_distance"];
+$_SESSION['rides_movingtime'] = $_COOKIE["rides_movingtime"];
+$_SESSION['rides_elevation'] = $_COOKIE["rides_elevation"];
+$_SESSION['runs_count'] = $_COOKIE["runs_count"];
+$_SESSION['runs_distance'] = $_COOKIE["runs_distance"];
+$_SESSION['runs_movingtime'] = $_COOKIE["runs_movingtime"];
+$_SESSION['runs_elevation'] = $_COOKIE["runs_elevation"];
+$_SESSION['swims_count'] = $_COOKIE["swims_count"];
+$_SESSION['swims_distance'] = $_COOKIE["swims_distance"];
+$_SESSION['swims_movingtime'] = $_COOKIE["swims_movingtime"];
 ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -92,6 +105,42 @@ $_SESSION['nb_activites'] = $_COOKIE["nb_activites"];
 			</article>
 		</div>
 			
+		<div id="profil_4">
+			<article class="box">
+				<table id="profil_4_table">
+					<tr>
+						<th><h2>Stats</h2></th>
+						<th><img src="images/swim.png" alt="logo_swim"></th>
+						<th><img src="images/run.png" alt="logo_run"></th>
+						<th><img src="images/bike.png" alt="logo_bike"></th>
+					</tr>
+					<tr>
+						<td>Nombre d'activités</td>
+						<td style="text-align:center;"><?php echo $_SESSION['swims_count']?></td>
+						<td style="text-align:center;"><?php echo $_SESSION['runs_count']?></td>
+						<td style="text-align:center;"><?php echo $_SESSION['rides_count']?></td>
+					</tr>
+					<tr>
+						<td>Distance totale</td>
+						<td style="text-align:center;"><?php echo $_SESSION['swims_distance']?></td>
+						<td style="text-align:center;"><?php echo $_SESSION['runs_distance']?></td>
+						<td style="text-align:center;"><?php echo $_SESSION['rides_distance']?></td>
+					</tr>
+					<tr>
+						<td>Durée totale</td>
+						<td style="text-align:center;"><?php echo $_SESSION['swims_movingtime']?></td>
+						<td style="text-align:center;"><?php echo $_SESSION['runs_movingtime']?></td>
+						<td style="text-align:center;"><?php echo $_SESSION['rides_movingtime']?></td>
+					</tr>
+					<tr>
+						<td>Dénivelé totale</td>
+						<td style="text-align:center;">-</td>
+						<td style="text-align:center;"><?php echo $_SESSION['runs_elevation']?></td>
+						<td style="text-align:center;"><?php echo $_SESSION['rides_elevation']?></td>
+					</tr>
+				</table>
+			</article>
+		</div>
 
 	</body>
 

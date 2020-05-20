@@ -39,12 +39,37 @@ echo '
             success: function(reponse2, textStatus, xhr){
                 //console.log(reponse2);
                 createCookie("nb_activites", reponse2.all_ride_totals.count+reponse2.all_run_totals.count+reponse2.all_swim_totals.count, "10");
+                createCookie("rides_count", reponse2.all_ride_totals.count, "10");
+                createCookie("rides_distance", (reponse2.all_ride_totals.distance/1000).toFixed(2) + " km", "10");
+                createCookie("rides_movingtime", convertTime(reponse2.all_ride_totals.moving_time), "10");
+                createCookie("rides_elevation", (reponse2.all_ride_totals.elevation_gain/1000).toFixed(2) + " km", "10");
+                createCookie("runs_count", reponse2.all_run_totals.count, "10");
+                createCookie("runs_distance", (reponse2.all_run_totals.distance/1000).toFixed(2) + " km", "10");
+                createCookie("runs_movingtime", convertTime(reponse2.all_run_totals.moving_time), "10");
+                createCookie("runs_elevation", (reponse2.all_run_totals.elevation_gain/1000).toFixed(2) + " km", "10");
+                createCookie("swims_count", reponse2.all_swim_totals.count, "10");
+                createCookie("swims_distance", (reponse2.all_swim_totals.distance/1000).toFixed(2) + " km", "10");
+                createCookie("swims_movingtime", convertTime(reponse2.all_swim_totals.moving_time), "10");
             },
             error: function(error) {
                 document.location.href="deconnexion.php";
             }
         })
     })
+
+    function convertTime( seconds ) {
+        var hour, minute;
+        minute = Math.floor(seconds / 60);
+        seconds = seconds % 60;
+        hour = Math.floor(minute / 60);
+        minute = minute % 60;
+        return hour+":"+twoDigit(minute)+":"+twoDigit(seconds);
+    }
+    
+    function twoDigit(n) {
+        return (n < 10 ? \'0\' : \'\') + n;
+    }
+    
     </script>
     ';
 

@@ -30,7 +30,7 @@ $(document).ready(function(){
 				cell1.innerHTML = reponse[i].type;
 				cell2.innerHTML = reponse[i].start_date.substring(8, 10).concat("-",reponse[i].start_date.substring(5, 7),"-",reponse[i].start_date.substring(0, 4));
 				cell3.innerHTML = reponse[i].name;
-
+				
 				var hour = convertS(reponse[i].moving_time).hour;
 				var minute = convertS(reponse[i].moving_time).minute;
 				var seconds = convertS(reponse[i].moving_time).seconds;
@@ -49,6 +49,10 @@ $(document).ready(function(){
 				}
 
 				cell6.innerHTML = reponse[i].total_elevation_gain.toFixed(0)+" m";
+
+				cell4.style.textAlign = "right";
+				cell5.style.textAlign = "right";
+				cell6.style.textAlign = "right";
 			}
 			var button1 = document.getElementById("button_back");
 			<?php if ($_SESSION['numpage']>1) {?>
@@ -132,12 +136,12 @@ function forward() {
 		<div id="div_tableau">
 			<table id="tableau">
 				<tr>
-					<td>Type</td>
-					<td>Date</td>
-					<td>Nom</td>
-					<td>Durée</td>
-					<td>Distance</td>
-					<td>Dénivelé</td>
+					<th><h3>Type</h3></th>
+					<th><h3>Date</h3></th>
+					<th><h3>Nom</h3></th>
+					<th style="text-align:center;"><h3>Durée</h3></th>
+					<th style="text-align:center;"><h3>Distance</h3></th>
+					<th style="text-align:center;"><h3>Dénivelé</h3></th>
 				</tr>
 			</table>
 		</div>

@@ -1969,7 +1969,7 @@
 	input[type="button"],
 	button,
 	.button {
-		background-color: #5a5a5a;
+		background-color: rgba(0, 0, 0, 0.4);
 		color: #ffffff !important;
 	}
 
@@ -1978,7 +1978,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #676767;
+			background-color: rgba(0, 0, 0);
 		}
 
 		input[type="submit"]:active,
@@ -4597,6 +4597,24 @@
 			
 		}
 
+		#profil_4 {
+			float: right;
+			width: 55%;
+			margin-right: 2%;
+		}
+
+		#profil_4_table img {
+			width: 20%;
+			margin-left: 40%;
+			vertical-align: middle;
+		}
+		
+
+		#profil_4_table h2 {
+			margin: 0% 0% 0% 0%;;
+			
+		}
+
 		#profil_1 .box, #profil_2 .box{
 			padding: 2em;
 			border-radius: 10px;
@@ -4605,6 +4623,11 @@
 		#profil_3 .box  {
 			border-radius: 50%;
 			padding: 3.5em;
+		}
+
+		#profil_4 .box {
+			border-radius: 10px;
+			padding: 1em;
 		}
 		
 		#profil_1_img, #profil_2_img {
@@ -4638,9 +4661,18 @@
 			width: 90%;
 			margin-left: 5%;
 			margin-top:2%;
-			background-color: rgba(0, 0, 0, 0.4);
-			border-radius : 10px;
-			
+			border-radius : 15px;			
+		}
+
+		#tableau td {
+			font-size: 0.95rem;
+		}
+
+		#tableau th:nth-child(0n+1) {
+			border-top-left-radius: 20px;
+		}
+		#tableau th:nth-child(0n+6) {
+			border-top-right-radius: 20px;
 		}
 
 		#button_back {
@@ -4652,4 +4684,16 @@
 			float : right;
 			margin-right: 45%;
 		}
-		
+
+		#tableau h3 {
+			margin-bottom: 0.2%;
+			margin-top: 2.5%;
+		}
+
+		#tableau tr:nth-child(odd) {
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+
+		#tableau tr:nth-child(even) {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
