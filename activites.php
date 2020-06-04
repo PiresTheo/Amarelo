@@ -153,23 +153,4 @@ function forward() {
 		</div>
 	</body>
 
-	<!-- Footer -->
-	<!--
-	<footer id="footer"> 
-		<div class="inner">	
-
-			<ul class="icons">
-				<li><a href="https://twitter.com/Piresss_" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="https://www.facebook.com/theo.pires.5" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="https://www.instagram.com/to.piress/" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
-			</ul>
-
-			<div class="copyright">
-				&copy; Amarelo. Design: <a href="https://templated.co">TEMPLATED</a>. Powered by Strava.
-			</div>
-
-		</div>
-	</footer>
--->
-
 </html>

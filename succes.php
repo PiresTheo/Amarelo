@@ -3,6 +3,14 @@ session_start();
 //Numéro de la page pour la page activités remis à la valeur par défaut
 $_SESSION['numpage'] = 1;
 ?>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/succes.js"></script>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -41,33 +49,15 @@ $_SESSION['numpage'] = 1;
 	</head>
 
 	<body id="bodypage">
+		<script>
+			console.log(tab_succes_run_distance);
+			console.log(tab_succes_bike_distance);
+			console.log(tab_succes_swim_distance);
+
+			console.log(tab_succes_run_duree);
+			console.log(tab_succes_bike_duree);
+			console.log(tab_succes_swim_duree);
+		</script>
 	</body>
-
-	<!-- Footer -->
-	<!--
-	<footer id="footer"> 
-		<div class="inner">	
-
-			<ul class="icons">
-				<li><a href="https://twitter.com/Piresss_" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="https://www.facebook.com/theo.pires.5" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="https://www.instagram.com/to.piress/" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
-			</ul>
-
-			<div class="copyright">
-				&copy; Amarelo. Design: <a href="https://templated.co">TEMPLATED</a>. Powered by Strava.
-			</div>
-
-		</div>
-	</footer>
--->
-
-<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
 
 </html>

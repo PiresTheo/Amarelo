@@ -1,21 +1,61 @@
-authentification
-token
-Si premiere connexion (pas present dans la bdd)
-	recup toutes les activités et tcheck succes sur toutes les activites
-	ajout bdd avec la start_date de la derniere activite
-sinon 
-	recup les nouvelles activités en fct de la start_date dans la bdd et tcheck succes sur celles ci
-fin
+Liste succes
+RUN :
 
-profil
-affichage des données
-activités affichage des 20 dernières activités.
+distance
+5km
+10km
+21.0975 km
+42.195 km
 
-GARDER LES ACTIVITES EN MEMOIRE OU FAIRE QUE DES REQUETES A LAPI
+50km
+60km
+70km
+80km
+90km
+100km
+120km
+
+
+BIKE :
+
+20km
+30km
+40km
+50km
+60km
+70km
+80km
+90km
+100km
+...
+300km
+
+
+SWIM :
+
+500m
+800m
+1000m
+1500m
+2000m
+3000m
+3800m
+4000m
+5000m
+6000m
+7000m
+8000m
+9000m
+10000m
+
+
+
+
+
+
+
 
 
 
 
 rq : pour use "after" ca compare la date timestamp à la start_date_local, si <= affiche pas, si > affiche
-
-ajouter la deconnexion quand on est redirigé en cas d'erreur pendant la premiere connexion

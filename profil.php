@@ -65,7 +65,7 @@ $_SESSION['swims_movingtime'] = $_COOKIE["swims_movingtime"];
 					</ul>
 				</div>
 				<div id="a_connected">
-					<li><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']."</font>";?></li>
+					<li><?php echo '<font color="white">'.$_SESSION['firstname']." ".$_SESSION['lastname']."</font>";?></li>
 					<li><img src="images/logo_account.png" alt="profile_logo"></li>
 				</div>
 			</div>
