@@ -3,20 +3,15 @@
 session_start();
 $_SESSION['date_lastactivity'] = $_COOKIE["date_lastactivity"];
 
-//ajoute à la bdd
-require('interaction_bdd.php');
-$ajout = ajouterUtilisateur($_SESSION['id'],0,"[]",strtotime($_SESSION['date_lastactivity']));
-if ($ajout==false) { //sécurité
-    header('Location: http://127.0.0.1/Amarelo/deconnexion.php');
-    exit();
-}
-
-//recuperer toutes les activités et comparés ou faire fonction commune à premiere connexion et autre connexion
-
-
-//redirection au profil
-header('Location: http://127.0.0.1/Amarelo/athlete_infos.php');
-
-
-
+//Calcul points du profil et succes accomplis puis renvoi vers premiere_connexion2.php
+echo '
+<script type="text/javascript" src="assets/js/succes.js"></script>
+<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<script>
+calculNouveauSucces("'.$_SESSION['token_type'].'","'.$_SESSION['access_token'].'",0,"0,0,0,0,0,0",1);
+</script>
+';
 ?>
+
+

@@ -10,6 +10,61 @@ $_SESSION['numpage'] = 1;
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/succes.js"></script>
+<script>
+	function clearTables() {
+		var table_distance = document.getElementById("table_succes_distance");
+		var table_duree = document.getElementById("table_succes_duree");
+		var rowCount = table_distance.rows.length;
+		var rowCount2 = table_duree.rows.length;
+		for (var i=1; i<rowCount; i++) {
+			table_distance.deleteRow(1);
+		}
+		for (var i=1; i<rowCount2; i++) {
+			table_duree.deleteRow(1);
+		}
+	}
+	function myclick(numero) {
+		var table_distance = document.getElementById("table_succes_distance");
+		var table_duree = document.getElementById("table_succes_duree");
+		if (numero==1) {
+			clearTables();
+			for (let i=1; i<=tab_succes_swim_distance.length; i++) {
+				var row = table_distance.insertRow(i);
+				var cell1 = row.insertCell(0);
+				cell1.innerHTML = tab_succes_swim_distance[i-1].nom;
+			}
+			for (let i=1; i<=tab_succes_swim_duree.length; i++) {
+				var row = table_duree.insertRow(i);
+				var cell1 = row.insertCell(0);
+				cell1.innerHTML = tab_succes_swim_duree[i-1].nom;
+			}
+		} else if (numero==2) {
+			clearTables();
+			for (let i=1; i<=tab_succes_bike_distance.length; i++) {
+				var row = table_distance.insertRow(i);
+				var cell1 = row.insertCell(0);
+				cell1.innerHTML = tab_succes_bike_distance[i-1].nom;
+			}
+			for (let i=1; i<=tab_succes_bike_duree.length; i++) {
+				var row = table_duree.insertRow(i);
+				var cell1 = row.insertCell(0);
+				cell1.innerHTML = tab_succes_bike_duree[i-1].nom;
+			}
+		} else {
+			clearTables();
+			for (let i=1; i<=tab_succes_run_distance.length; i++) {
+				var row = table_distance.insertRow(i);
+				var cell1 = row.insertCell(0);
+				cell1.innerHTML = tab_succes_run_distance[i-1].nom;
+			}
+			for (let i=1; i<=tab_succes_run_duree.length; i++) {
+				var row = table_duree.insertRow(i);
+				var cell1 = row.insertCell(0);
+				cell1.innerHTML = tab_succes_run_duree[i-1].nom;
+			}
+		}
+	}
+</script>
 
 <!DOCTYPE HTML>
 <html>
@@ -49,15 +104,26 @@ $_SESSION['numpage'] = 1;
 	</head>
 
 	<body id="bodypage">
-		<script>
-			console.log(tab_succes_run_distance);
-			console.log(tab_succes_bike_distance);
-			console.log(tab_succes_swim_distance);
-
-			console.log(tab_succes_run_duree);
-			console.log(tab_succes_bike_duree);
-			console.log(tab_succes_swim_duree);
-		</script>
+		<div id="buttons_succes">
+			<button onclick="myclick(1)" name="swim_button">Swim</button>
+			<button onclick="myclick(2)" name="bike_button">Bike</button>
+			<button onclick="myclick(3)" name="run_button">Run</button>
+		</div>
+		<div id=tdiv_table_succes_distance>
+			<table id="table_succes_distance">
+				<tr>
+					<th style="text-align:center;"><h3>Distance</h3></th>
+				</tr>
+			</table>
+		</div>
+		<div id=tdiv_table_succes_duree>
+			<table id="table_succes_duree">
+				<tr>
+					<th style="text-align:center;"><h3>Durée</h3></th>
+				</tr>
+			</table>
+		</div>
+		<script> myclick(1)</script>
 	</body>
 
 </html>

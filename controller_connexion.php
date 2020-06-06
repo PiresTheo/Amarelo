@@ -12,6 +12,7 @@ $_SESSION['firstname'] = $_COOKIE["firstname"];
 $_SESSION['lastname'] = $_COOKIE["lastname"];
 
 
+
 require('interaction_bdd.php');
 $bdd = bddConnect();
 $requser = $bdd->prepare('SELECT * FROM users WHERE athlete_id = ?');
@@ -56,5 +57,6 @@ if ($userpresent == 0) { //premiere connexion
 } else { //error
     header('Location: http://127.0.0.1/Amarelo/deconnexion.php');
 }
+
 ?>
 
