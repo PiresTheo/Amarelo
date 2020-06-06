@@ -22,6 +22,7 @@ if ($userpresent == 0) { //premiere connexion
     echo '
     <script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="cookie.js"></script>
+    <script type="text/javascript" src="assets/js/succes.js"></script>
     <script type="text/javascript"> 
     $(document).ready(function() {
         $.ajax({
@@ -33,7 +34,7 @@ if ($userpresent == 0) { //premiere connexion
             success: function(reponse2, textStatus, xhr){
                 if (reponse2.length > 0) { //au moins une activité sur le compte
                     createCookie("date_lastactivity", reponse2[0].start_date_local, "10");
-                    document.location.href="premiere_connexion.php";
+                    calculNouveauSucces("'.$_SESSION['token_type'].'","'.$_SESSION['access_token'].'",0,"0,0,0,0,0,0",1);
                 } else { //aucune activité
                     createCookie("date_lastactivity", null, "10");
                     alert("Votre compte ne contient aucune activité");
@@ -48,12 +49,15 @@ if ($userpresent == 0) { //premiere connexion
     ';
     
 } else if ($userpresent == 1) { //deja connecté au moins une fois
-
-    //recuperation des activités depuis la derniere date
-
-    //redirection au profil
-    header('Location: http://127.0.0.1/Amarelo/athlete_infos.php');
-
+    $infos = $requser->fetch();
+    echo '
+    <script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="cookie.js"></script>
+    <script type="text/javascript" src="assets/js/succes.js"></script>
+    <script type="text/javascript"> 
+    calculNouveauSucces("'.$_SESSION['token_type'].'","'.$_SESSION['access_token'].'",'.$infos['date_lastactivity'].',"'.$infos['success_acquired'].'",2);
+    </script>
+    ';
 } else { //error
     header('Location: http://127.0.0.1/Amarelo/deconnexion.php');
 }

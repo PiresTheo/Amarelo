@@ -1,17 +1,25 @@
-<?php 
-//data from cookies to $_SESSION
+<?php
 session_start();
 $_SESSION['date_lastactivity'] = $_COOKIE["date_lastactivity"];
+$_SESSION['points'] = $_COOKIE['points'];
+$_SESSION['swim_dist'] = $_COOKIE['swim_dist'];
+$_SESSION['swim_duree'] = $_COOKIE['swim_duree'];
+$_SESSION['bike_dist'] = $_COOKIE['bike_dist'];
+$_SESSION['bike_duree'] = $_COOKIE['bike_duree'];
+$_SESSION['run_dist'] = $_COOKIE['run_dist'];
+$_SESSION['run_duree'] = $_COOKIE['run_duree'];
 
-//Calcul points du profil et succes accomplis puis renvoi vers premiere_connexion2.php
-echo '
-<script type="text/javascript" src="assets/js/succes.js"></script>
-<script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
-<script>
-calculNouveauSucces("'.$_SESSION['token_type'].'","'.$_SESSION['access_token'].'",0,"0,0,0,0,0,0",1);
-</script>
-';
+$success = strval($_SESSION['swim_dist']).','.strval($_SESSION['swim_duree']).','.strval($_SESSION['bike_dist']).','.strval($_SESSION['bike_duree']).','.strval($_SESSION['run_dist']).','.strval($_SESSION['run_duree']);
+require('interaction_bdd.php');
+$ajout = ajouterUtilisateur($_SESSION['id'],$_SESSION['points'],strtotime($_SESSION['date_lastactivity']),$success);
+if ($ajout==false) { //sécurité
+    header('Location: http://127.0.0.1/Amarelo/deconnexion.php');
+    exit();
+}
+
+//redirection au profil
+header('Location: http://127.0.0.1/Amarelo/athlete_infos.php');
+
+
 ?>
-
 

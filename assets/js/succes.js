@@ -92,7 +92,7 @@ function calculPoints(swim_dist,swim_duree,bike_dist,bike_duree,run_dist,run_dur
 }
 
 
-async function calculNouveauSucces(type_token,access_token,date,success_acquired,type_connexion) {
+function calculNouveauSucces(type_token,access_token,date,success_acquired,type_connexion) {
     const tmp = success_acquired.split(",");
     var swim_dist = tmp[0];
     var swim_duree = tmp[1];
@@ -149,11 +149,10 @@ function calculNouveauSucces2(type_token,access_token,date,swim_dist,swim_duree,
                     createCookie("run_dist", run_dist, "10");
                     createCookie("run_duree",run_duree, "10");
                     createCookie("points",calculPoints(swim_dist,swim_duree,bike_dist,bike_duree,run_dist,run_duree), "10");
-                    console.log(type_connexion);
                     if (type_connexion==1) {
-                        document.location.href="premiere_connexion2.php";
+                        document.location.href="premiere_connexion.php";
                     } else {
-                        document.location.href="autre_connexion2.php";
+                        document.location.href="autre_connexion.php";
                     }
                 } else {
                     return calculNouveauSucces2(type_token,access_token,date,swim_dist,swim_duree,bike_dist,bike_duree,run_dist,run_duree,npage+1);
