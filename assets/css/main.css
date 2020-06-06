@@ -1970,7 +1970,7 @@
 	button,
 	.button {
 		background-color: rgba(0, 0, 0, 0.4);
-		color: #ffffff !important;
+		color: #ffffff;
 	}
 
 		input[type="submit"]:hover,
@@ -4510,13 +4510,13 @@
 
 		#a_menu
 		{
-			left: 15%;
+			left: 14%;
 			
 		}
 
 		#a_menu2
 		{
-			right: 15%;
+			right: 13%;
 			
 		}
 		
@@ -4552,6 +4552,10 @@
 		#bodypage {
 			background-image: url("../../images/profil_bg.jpg");
 			background-size: cover;
+		}
+
+		#bodypage2 {
+			background-color: #000000;
 		}
 
 		#a_connected {
@@ -4622,7 +4626,7 @@
 		}
 
 		#profil_3_score h2 {
-			margin-left: 0.5em;
+			margin-left: 0.2em;
 		}
 
 		#profil_4 {
@@ -4637,6 +4641,10 @@
 			vertical-align: middle;
 		}
 
+		#profil_4_table td {
+			vertical-align: middle;
+		}
+
 		#profil_4_table h2 {
 			margin: 0% 0% 0% 0%;
 			
@@ -4648,11 +4656,8 @@
 			margin-left: 3%;
 		}
 
-		
-
 		#profil_5 h2 {
-			margin: 0% 0% 3% 2%;
-			font-size: 1.7rem;
+			margin: 0% 0% 4% 3%;
 		}
 
 		#img_shoes, #img_bikes {
@@ -4661,8 +4666,8 @@
 
 		#img_shoes img , #img_bikes img {
 			width: 100%;
-			margin-top: 19%;
-			margin-bottom: 10%;
+			margin-top: 26%;
+			margin-bottom: 20%;
 		}
 
 		#rec_shoes, #rec_bikes {
@@ -4690,14 +4695,23 @@
 		}
 		
 		#profil_3 .box  {
+			padding: 3em;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
 			border-radius: 50%;
-			padding: 3.5em;
 		}
 
 		#profil_4 .box, #profil_5 .box {
 			border-radius: 10px;
 			padding: 1em;
 		}
+
+		#profil_1 h2, #profil_2 h2, #profil_4 h2, #profil_5 h2 {
+			font-size : 1.5rem;
+		}
+
+
+
 		
 		#div_tableau {
 			width: 90%;
@@ -4740,5 +4754,65 @@
 			background-color: rgba(0, 0, 0, 0.5);
 		}
 
+		#buttons_succes {
+			margin-top: 4%;
+			width : 100%;
+			margin-left: 34.7%;
+		}
+
+		#buttons_succes button{
+			width : 10%;
+			background-color:  #FFEF00;
+			text-align : center;
+			color:black;
+			
+		}
+
+		#buttons_succes button:hover{
+			background-color:  #000000;
+			color:white;
+			border: 1px solid #FFEF00;
+		}
+
+		#div_table_succes_distance {
+			float:left;
+			margin-left:5%;
+		}
+
+		#div_table_succes_duree {
+			float: right;
+			margin-right: 5%;	
+		}
+
+		#div_table_succes_distance, #div_table_succes_duree {
+			width:43%;
+			margin-top:2%;
+			border-radius : 15px;		
+			border: 1px solid #FFEF00;	
+		}
+
+		#table_succes_distance td, #table_succes_duree td {
+			font-size: 0.95rem;
+		}
+
+		#table_succes_distance th:nth-child(0n+1), #table_succes_duree th:nth-child(0n+1) {
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
 		
-		
+		#table_succes_distance tr, #table_succes_duree tr{
+			background-color: black;
+			color : white;
+			font-weight: bold;
+		}
+
+		#table_succes_distance tr:hover, #table_succes_duree tr:hover{
+			background-color: #FFEF00;
+			color : black;
+			font-weight: bold;
+		}
+
+		#table_succes_distance h3, #table_succes_duree h3{
+			color:#FFEF00;
+			margin-top:1%;
+		}

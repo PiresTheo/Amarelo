@@ -32,11 +32,27 @@ $_SESSION['numpage'] = 1;
 				var row = table_distance.insertRow(i);
 				var cell1 = row.insertCell(0);
 				cell1.innerHTML = tab_succes_swim_distance[i-1].nom;
+				var cell2 = row.insertCell(1);
+				cell2.innerHTML = tab_succes_swim_distance[i-1].points + "\ud83c\udfc6";
+				var cell3 = row.insertCell(2);
+				if (i<=<?php echo $_SESSION["swim_dist"]?>) {
+					cell3.innerHTML = "RÉUSSI";
+				}else {
+					cell3.innerHTML = "";
+				}
 			}
 			for (let i=1; i<=tab_succes_swim_duree.length; i++) {
 				var row = table_duree.insertRow(i);
 				var cell1 = row.insertCell(0);
 				cell1.innerHTML = tab_succes_swim_duree[i-1].nom;
+				var cell2 = row.insertCell(1);
+				cell2.innerHTML = tab_succes_swim_duree[i-1].points + "\ud83c\udfc6";
+				var cell3 = row.insertCell(2);
+				if (i<=<?php echo $_SESSION["swim_duree"]?>) {
+					cell3.innerHTML = "RÉUSSI";
+				}else {
+					cell3.innerHTML = "";
+				}
 			}
 		} else if (numero==2) {
 			clearTables();
@@ -44,11 +60,27 @@ $_SESSION['numpage'] = 1;
 				var row = table_distance.insertRow(i);
 				var cell1 = row.insertCell(0);
 				cell1.innerHTML = tab_succes_bike_distance[i-1].nom;
+				var cell2 = row.insertCell(1);
+				cell2.innerHTML = tab_succes_bike_distance[i-1].points + "\ud83c\udfc6";
+				var cell3 = row.insertCell(2);
+				if (i<=<?php echo $_SESSION["bike_dist"]?>) {
+					cell3.innerHTML = "RÉUSSI";
+				}else {
+					cell3.innerHTML = "";
+				}
 			}
 			for (let i=1; i<=tab_succes_bike_duree.length; i++) {
 				var row = table_duree.insertRow(i);
 				var cell1 = row.insertCell(0);
 				cell1.innerHTML = tab_succes_bike_duree[i-1].nom;
+				var cell2 = row.insertCell(1);
+				cell2.innerHTML = tab_succes_bike_duree[i-1].points + "\ud83c\udfc6";
+				var cell3 = row.insertCell(2);
+				if (i<=<?php echo $_SESSION["bike_duree"]?>) {
+					cell3.innerHTML = "RÉUSSI";
+				}else {
+					cell3.innerHTML = "";
+				}
 			}
 		} else {
 			clearTables();
@@ -56,11 +88,27 @@ $_SESSION['numpage'] = 1;
 				var row = table_distance.insertRow(i);
 				var cell1 = row.insertCell(0);
 				cell1.innerHTML = tab_succes_run_distance[i-1].nom;
+				var cell2 = row.insertCell(1);
+				cell2.innerHTML = tab_succes_run_distance[i-1].points + "\ud83c\udfc6";
+				var cell3 = row.insertCell(2);
+				if (i<=<?php echo $_SESSION["run_dist"]?>) {
+					cell3.innerHTML = "RÉUSSI";
+				}else {
+					cell3.innerHTML = "";
+				}
 			}
 			for (let i=1; i<=tab_succes_run_duree.length; i++) {
 				var row = table_duree.insertRow(i);
 				var cell1 = row.insertCell(0);
 				cell1.innerHTML = tab_succes_run_duree[i-1].nom;
+				var cell2 = row.insertCell(1);
+				cell2.innerHTML = tab_succes_run_duree[i-1].points + "\ud83c\udfc6";
+				var cell3 = row.insertCell(2);
+				if (i<=<?php echo $_SESSION["run_duree"]?>) {
+					cell3.innerHTML = "RÉUSSI";
+				}else {
+					cell3.innerHTML = "";
+				}
 			}
 		}
 	}
@@ -103,23 +151,23 @@ $_SESSION['numpage'] = 1;
 		</div>
 	</head>
 
-	<body id="bodypage">
+	<body id="bodypage2">
 		<div id="buttons_succes">
 			<button onclick="myclick(1)" name="swim_button">Swim</button>
 			<button onclick="myclick(2)" name="bike_button">Bike</button>
 			<button onclick="myclick(3)" name="run_button">Run</button>
 		</div>
-		<div id=tdiv_table_succes_distance>
+		<div id=div_table_succes_distance>
 			<table id="table_succes_distance">
 				<tr>
-					<th style="text-align:center;"><h3>Distance</h3></th>
+					<th colspan="3" style="text-align:center;"><h3>Distance</h3></th>
 				</tr>
 			</table>
 		</div>
-		<div id=tdiv_table_succes_duree>
+		<div id=div_table_succes_duree>
 			<table id="table_succes_duree">
 				<tr>
-					<th style="text-align:center;"><h3>Durée</h3></th>
+					<th colspan="3" style="text-align:center;"><h3>Durée</h3></th>
 				</tr>
 			</table>
 		</div>
