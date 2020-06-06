@@ -1,0 +1,1 @@
+Il faut importer la table de données "users.sql" dans une base que j'avais appelé bdd_amarelo dans phpmyadmin avec wampserver.
