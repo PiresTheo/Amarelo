@@ -4756,12 +4756,12 @@
 
 		#buttons_succes {
 			margin-top: 4%;
-			width : 100%;
+			width : 50%;
 			margin-left: 34.7%;
 		}
 
 		#buttons_succes button{
-			width : 10%;
+			width : 20%;
 			background-color:  #FFEF00;
 			text-align : center;
 			color:black;
