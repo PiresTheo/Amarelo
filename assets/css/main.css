@@ -4816,3 +4816,7 @@
 			color:#FFEF00;
 			margin-top:1%;
 		}
+
+		#body_loading {
+			background-image: url("../../images/background_loading.gif");
+		}

@@ -64,3 +64,12 @@ if ($userpresent == 0) { //premiere connexion
 
 ?>
 
+<!DOCTYPE HTML>
+<html>
+	<head>
+	</head>
+
+	<body id="body_loading">
+	</body>
+
+</html>
